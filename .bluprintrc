@@ -3,15 +3,18 @@
   "name": "Django app",
   "category": "",
   "actions": [{
-    "type": "text",
-    "name": "appName",
-    "message": "What's your Django app name? (lowercased and underscored)\n"
+    "action": "prompt",
+    "questions": [{
+      "type": "text",
+      "name": "appName",
+      "message": "What's your Django app name? (lowercased and underscored)\n"
+    }, {
+      "type": "text",
+      "name": "appSettingName",
+      "message": "What's your Django app setting name? (UPPERcased and underscored)\n"
+    }]
   }, {
-    "type": "text",
-    "name": "appSettingName",
-    "message": "What's your Django app setting name? (UPPERcased and underscored)\n"
-  }, {
-    "type": "regexreplace",
+    "action": "regexreplace",
     "files": [
       "PROJECT_README.md",
       "setup.cfg",
@@ -34,13 +37,13 @@
       ["MYAPP", "{{ appSettingName }}"]
     ]
   }, {
-    "type": "remove",
+    "action": "remove",
     "paths": [
       "example/Pipfile.lock",
       "README.md"
     ]
   }, {
-    "type": "move",
+    "action": "move",
     "paths": [
       ["myapp/static/myapp/", "myapp/static/{{ appName }}/"],
       ["myapp/templates/myapp/", "myapp/templates/{{ appName }}/"],
