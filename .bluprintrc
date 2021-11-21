@@ -19,10 +19,12 @@
       "example/project/settings.py",
       "example/project/urls.py",
       "myapp/apps.py",
+      "myapp/conf.py",
       "myapp/urls.py",
       "myapp/templates/myapp/home.html",
       "myapp/templatetags/myapp_manifest.py",
       "myapp/views/home.py",
+      "myapp/utils/auth.py",
       "statics/package.json",
       "statics/vite.config.js"
     ],
