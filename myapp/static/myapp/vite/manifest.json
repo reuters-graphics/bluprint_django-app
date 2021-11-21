@@ -1,0 +1,16 @@
+{
+  "src/home.js": {
+    "file": "assets/home.33ac7a5f.js",
+    "src": "src/home.js",
+    "isEntry": true,
+    "imports": [
+      "_vendor.fbafc88b.js"
+    ],
+    "css": [
+      "assets/home.ebfbb192.css"
+    ]
+  },
+  "_vendor.fbafc88b.js": {
+    "file": "assets/vendor.fbafc88b.js"
+  }
+}

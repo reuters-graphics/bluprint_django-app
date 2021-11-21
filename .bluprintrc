@@ -1,0 +1,49 @@
+{
+  "bluprint": "^0.6.3",
+  "name": "Django app",
+  "category": "",
+  "actions": [{
+    "type": "text",
+    "name": "appName",
+    "message": "What's your Django app name (lowercased and underscored)?\n"
+  }, {
+    "type": "text",
+    "name": "appSettingName",
+    "message": "What's your Django app setting name (UPPERcased and underscored)?\n"
+  }, {
+    "type": "regexreplace",
+    "files": [
+      "PROJECT_README.md",
+      "setup.cfg",
+      "example/Pipfile",
+      "example/project/settings.py",
+      "example/project/urls.py",
+      "myapp/apps.py",
+      "myapp/urls.py",
+      "myapp/templatetags/myapp_manifest.py",
+      "myapp/views/home.py",
+      "statics/package.json",
+      "statics/vite.config.js"
+    ],
+    "replace": [
+      ["myapp", "{{#underscore}}{{#slugify}}{{ appName }}{{/slugify}}{{/underscore}}"],
+      ["Myapp", "{{#capitalize}}{{#camelize}}{{#slugify}}{{ appName }}{{/slugify}}{{/camelize}}{{/capitalize}}"],
+      ["MYAPP", "{{ appSettingName }}"]
+    ]
+  }, {
+    "type": "remove",
+    "paths": [
+      "example/Pipfile.lock",
+      "README.md"
+    ]
+  }, {
+    "type": "move",
+    "paths": [
+      ["myapp/static/myapp/", "myapp/static/{{ appName }}/"],
+      ["myapp/templates/myapp/", "myapp/templates/{{ appName }}/"],
+      ["myapp/templatetags/myapp_manifest.py", "myapp/templatetags/{{ appName }}_manifest.py"],
+      ["myapp/", "{{ appName }}/"],
+      ["PROJECT_README.md", "README.md"]
+    ]
+  }]
+}

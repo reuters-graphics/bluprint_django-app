@@ -1,0 +1,17 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]
+python_version = "3"
+
+[packages]
+django = ">=3.0"
+djangorestframework = "*"
+dj-database-url = "*"
+myapp = { path = "./..", editable = true }
+
+[dev-packages]
+black = "==21.11b1"
+isort = "*"
