@@ -1,5 +1,6 @@
 import json
 from pathlib import Path
+from urllib.parse import urljoin
 
 from django import template
 from django.conf import settings
@@ -9,6 +10,11 @@ from django.utils.safestring import mark_safe
 register = template.Library()
 
 VITE_DEV_MODE = getattr(settings, "MYAPP_VITE_DEV_MODE", False)
+
+VITE_SERVER_PROTOCOL = getattr(settings, "MYAPP_VITE_SERVER_PROTOCOL", "http")
+VITE_SERVER_HOST = getattr(settings, "MYAPP_VITE_SERVER_HOST", "localhost")
+VITE_SERVER_PORT = getattr(settings, "MYAPP_VITE_SERVER_PORT", 3000)
+
 VITE_OUT_DIR = "vite"
 APP_STATIC_DIR = "myapp"
 
@@ -40,7 +46,10 @@ def format_link_tag(href):
 
 
 def get_dev_path(asset):
-    return f"/{asset}"
+    return urljoin(
+        f"{VITE_SERVER_PROTOCOL}://{VITE_SERVER_HOST}:{VITE_SERVER_PORT}",
+        asset,
+    )
 
 
 def get_built_path(asset):

@@ -16,6 +16,14 @@
   }, {
     "action": "regexreplace",
     "files": [
+      "example/project/urls.py"
+    ],
+    "replace": [
+      ["my-app", "{{#slugify}}{{ appName }}{{/slugify}}"]
+    ]
+  }, {
+    "action": "regexreplace",
+    "files": [
       "PROJECT_README.md",
       "setup.cfg",
       "example/Pipfile",
