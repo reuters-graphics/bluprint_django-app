@@ -15,7 +15,7 @@
    ```python
    INSTALLED_APPS = [
        # ...
-       'myapp',
+       "myapp",
    ]
    ```
 

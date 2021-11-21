@@ -79,6 +79,6 @@ MEDIA_URL = "/media/"
 #########################
 # myapp settings
 
-# When true, vite assets are served from dev with HMR.
-# Setting to false to serve built vite assets from staticfiles.
+# When true, Vite assets are served from dev with HMR.
+# Setting to false serves built Vite assets from staticfiles.
 MYAPP_VITE_DEV_MODE = True
