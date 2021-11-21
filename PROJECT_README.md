@@ -2,7 +2,7 @@
 
 # django-myapp
 
-## Quick start
+## Quickstart
 
 1. Install the app from GitHub:
 
@@ -14,15 +14,20 @@
 
    ```python
    INSTALLED_APPS = [
-       ...
+       # ...
        'myapp',
    ]
    ```
 
-3. Include the myapp URLconf in your project urls.py like this:
+3. Include the myapp URLconf in your project's `urls.py` like this:
 
    ```python
-   path('myapp/', include('myapp.urls')),
+   from django.urls import include, path
+
+   urlpatterns = [
+      # ...
+      path("myapp/", include("myapp.urls")),
+   ]
    ```
 
 4. Run `python manage.py migrate` to create the myapp models.
