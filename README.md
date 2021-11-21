@@ -4,7 +4,7 @@
 
 A bluprint for building pluggable Django apps.
 
-Includes a modern frontend development environment using [Vite](https://vitejs.dev/) and pre-configured for [Svelte](https://svelte.dev/).
+Includes a modern frontend development environment for building static files using [Vite](https://vitejs.dev/), preconfigured for [Svelte](https://svelte.dev/).
 
 ## Quickstart
 
