@@ -5,11 +5,11 @@
   "actions": [{
     "type": "text",
     "name": "appName",
-    "message": "What's your Django app name (lowercased and underscored)?\n"
+    "message": "What's your Django app name? (lowercased and underscored)\n"
   }, {
     "type": "text",
     "name": "appSettingName",
-    "message": "What's your Django app setting name (UPPERcased and underscored)?\n"
+    "message": "What's your Django app setting name? (UPPERcased and underscored)\n"
   }, {
     "type": "regexreplace",
     "files": [
@@ -20,6 +20,7 @@
       "example/project/urls.py",
       "myapp/apps.py",
       "myapp/urls.py",
+      "myapp/templates/myapp/home.html",
       "myapp/templatetags/myapp_manifest.py",
       "myapp/views/home.py",
       "statics/package.json",
