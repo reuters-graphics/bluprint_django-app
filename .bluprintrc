@@ -28,8 +28,8 @@
       "myapp/templatetags/myapp_manifest.py",
       "myapp/views/home.py",
       "myapp/utils/auth.py",
-      "statics/package.json",
-      "statics/vite.config.js"
+      "staticapp/package.json",
+      "staticapp/vite.config.js"
     ],
     "replace": [
       ["myapp", "{{#underscore}}{{#slugify}}{{ appName }}{{/slugify}}{{/underscore}}"],
@@ -51,5 +51,8 @@
       ["myapp/", "{{ appName }}/"],
       ["PROJECT_README.md", "README.md"]
     ]
+  }, {
+    "action": "log",
+    "msg": "Finished scaffolding {green {{ appName }}}."
   }]
 }
