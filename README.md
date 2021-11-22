@@ -23,6 +23,8 @@ mkdir my-project && cd my-project
 bluprint start
 ```
 
+Otherwise, you can copy this repo and adjust the file and setting names yourself.
+
 ## Developing
 
 Read more about developing your app in the [Developing](./DEVELOPING.md) docs.
