@@ -4,7 +4,7 @@
   "main": "vite.config.js",
   "private": true,
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "vite build"
   },
   "engines": {
