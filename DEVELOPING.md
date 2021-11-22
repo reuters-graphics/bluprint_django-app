@@ -28,7 +28,7 @@ Your pluggable Django app.
 
 ## Getting started
 
-#### Servers
+### Servers
 
 To start developing your app, open TWO terminals.
 
@@ -49,17 +49,17 @@ make superuser
 make develop
 ```
 
-#### Django Settings
+### Django Settings
 
-##### `MYAPP_VITE_SERVER_PORT`
+#### `MYAPP_VITE_SERVER_PORT`
 
 In `example/project/settings.py`, make sure the `MYAPP_VITE_SERVER_PORT` is set to the port the Vite server is running on. (Default, `3000`.)
 
-##### `MYAPP_VITE_DEV_MODE`
+#### `MYAPP_VITE_DEV_MODE`
 
 As long as `MYAPP_VITE_DEV_MODE` is `True`, then your app's template tags will resolve to the development version of scripts served by Vite. If it is set to `False` (which is the default), the template tags will look for scripts in your app's static files directory, expecting them to have been built by Vite.
 
-#### Template tags
+### Template tags
 
 To use a script you're building in your Vite environment within a Django template, use your app's template tags and reference the script in your `staticapp/src/` directory.
 
@@ -71,7 +71,7 @@ To use a script you're building in your Vite environment within a Django templat
 </head>
 ```
 
-#### Building scripts
+### Building scripts
 
 Any JS file at the root of `staticapp/src/` will be considered an entry and will be served and built by Vite.
 
