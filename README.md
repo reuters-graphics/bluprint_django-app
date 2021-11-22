@@ -2,7 +2,7 @@
 
 # bluprint_django-app
 
-A bluprint for building pluggable Django apps.
+A template for pluggable Django apps.
 
 Includes a modern frontend development environment for building static files using [Vite](https://vitejs.dev/), preconfigured for [Svelte](https://svelte.dev/).
 
