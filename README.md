@@ -8,7 +8,7 @@ Includes a modern frontend development environment for building static files usi
 
 ## Quickstart
 
-This rig is best used with [bluprint](https://github.com/reuters-graphics/bluprint), our in-house templating tool.
+This repo is best used with [bluprint](https://github.com/reuters-graphics/bluprint), our in-house scaffolding tool.
 
 If you haven't already, add this bluprint to your CLI.
 
@@ -25,7 +25,7 @@ bluprint start
 
 ## Developing
 
-### Servers
+#### Servers
 
 To start developing, open TWO terminals.
 
@@ -45,17 +45,17 @@ make bootstrap
 make develop
 ```
 
-### Django Settings
+#### Django Settings
 
-#### `<YOURAPP>_VITE_SERVER_PORT`
+##### `<YOURAPP>_VITE_SERVER_PORT`
 
 In `example/project/settings.py`, make sure the `<YOURAPP>_VITE_SERVER_PORT` is set to the port the Vite server is running on. (Default, `3000`.)
 
-#### `<YOURAPP>_VITE_DEV_MODE`
+##### `<YOURAPP>_VITE_DEV_MODE`
 
 As long as `<YOURAPP>_VITE_DEV_MODE` is `True`, then your app's template tags will resolve to the development version of scripts served by Vite. If it is set to `False` (which is the default), the template tags will look for scripts in your app's static files directory, expecting them to have been built by Vite.
 
-### Template tags
+#### Template tags
 
 To add a script you're building in your Vite environment to a template, use your apps template tags and reference the script in your `staticapp/src/` directory.
 
@@ -67,7 +67,7 @@ To add a script you're building in your Vite environment to a template, use your
 </head>
 ```
 
-### Building scripts
+#### Building scripts
 
 Any JS file at the root of `staticapp/src/` will be considered an entry and will be served and built by Vite.
 
