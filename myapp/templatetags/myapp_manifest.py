@@ -57,10 +57,8 @@ def get_built_path(asset):
     return static(relative_path)
 
 
-def get_dev_scripts(asset):
-    hmr = format_script_tag(get_dev_path("@vite/client"))
-    app = format_script_tag(get_dev_path(asset))
-    return f"{hmr}\n{app}"
+def get_dev_script(asset):
+    return format_script_tag(get_dev_path(asset))
 
 
 def get_built_scripts(asset):
@@ -77,5 +75,12 @@ def get_built_scripts(asset):
 @register.simple_tag
 def vite(asset):
     if VITE_DEV_MODE:
-        return mark_safe(get_dev_scripts(asset))
+        return mark_safe(get_dev_script(asset))
     return mark_safe(get_built_scripts(asset))
+
+
+@register.simple_tag
+def vite_hmr():
+    if VITE_DEV_MODE:
+        return mark_safe(get_dev_script("@vite/client"))
+    return ""
