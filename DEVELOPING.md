@@ -28,6 +28,10 @@ Your pluggable Django app.
 
 ## Getting started
 
+### Prereqs
+
+You'll need [pipenv](https://pipenv.pypa.io/en/latest/#install-pipenv-today) and a version of node `>= 14.16.0` (use [n](https://github.com/tj/n)!) installed.
+
 ### Servers
 
 To start developing your app, open TWO terminals.
