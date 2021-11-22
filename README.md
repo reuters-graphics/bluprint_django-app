@@ -23,7 +23,7 @@ mkdir my-project && cd my-project
 bluprint start
 ```
 
-Otherwise, you can copy this repo and adjust the file and setting names yourself.
+Otherwise, you can copy this repo and adjust the file and settings names yourself.
 
 ## Developing
 
