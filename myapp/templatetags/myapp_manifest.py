@@ -9,14 +9,18 @@ from django.utils.safestring import mark_safe
 
 register = template.Library()
 
+# Controls whether we're getting assets from Vite's dev server
+# or from the app's own static files, once built.
 VITE_DEV_MODE = getattr(settings, "MYAPP_VITE_DEV_MODE", False)
 
 VITE_SERVER_PROTOCOL = getattr(settings, "MYAPP_VITE_SERVER_PROTOCOL", "http")
 VITE_SERVER_HOST = getattr(settings, "MYAPP_VITE_SERVER_HOST", "localhost")
 VITE_SERVER_PORT = getattr(settings, "MYAPP_VITE_SERVER_PORT", 3000)
 
-VITE_OUT_DIR = "vite"
+# These settings match what's in Vite's build.outDir config
 APP_STATIC_DIR = "myapp"
+VITE_OUT_DIR = "vite"
+
 
 MANIFEST_PATH = (
     Path(__file__).parent.parent / "static" / APP_STATIC_DIR / VITE_OUT_DIR / "manifest.json"
@@ -30,7 +34,7 @@ def get_vite_manifest():
         return json.load(f)
 
 
-def get_vite_asset(asset):
+def get_vite_asset_manifest(asset):
     manifest = get_vite_manifest()
     if asset not in manifest:
         raise RuntimeError(f"Cannot find {asset} in Vite manifest at {MANIFEST_PATH}")
@@ -62,7 +66,7 @@ def get_dev_script(asset):
 
 
 def get_built_scripts(asset):
-    asset_manifest = get_vite_asset(asset)
+    asset_manifest = get_vite_asset_manifest(asset)
     entry = format_script_tag(get_built_path(asset_manifest["file"]))
     if "css" in asset_manifest:
         stylesheets = "\n".join(
