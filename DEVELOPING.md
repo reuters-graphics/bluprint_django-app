@@ -55,13 +55,15 @@ make develop
 
 ### Django Settings
 
+Settings for your app are in `example/project/settings.py`.
+
 #### `MYAPP_VITE_SERVER_PORT`
 
-In `example/project/settings.py`, make sure the `MYAPP_VITE_SERVER_PORT` is set to the port the Vite server is running on. (Default, `3000`.)
+Set to the port the Vite server is running on. Default is `3000`.
 
 #### `MYAPP_VITE_DEV_MODE`
 
-As long as `MYAPP_VITE_DEV_MODE` is `True`, then your app's template tags will resolve to the development version of scripts served by Vite. If it is set to `False` (which is the default), the template tags will look for scripts in your app's static files directory, expecting them to have been built by Vite.
+When `True`, your app's template tags will resolve to the development version of scripts served by Vite. If set to `False` (which is the default), the template tags will look for scripts in your app's static files directory, presuming Vite has built them there.
 
 ### Template tags
 
