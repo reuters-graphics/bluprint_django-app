@@ -17,6 +17,7 @@
     "action": "regexreplace",
     "files": [
       "PROJECT_README.md",
+      "DEVELOPING.md",
       "setup.cfg",
       "example/Pipfile",
       "example/project/settings.py",
