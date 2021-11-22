@@ -28,3 +28,7 @@ Otherwise, you can copy this repo and adjust the file and setting names yourself
 ## Developing
 
 Read more about developing your app in the [Developing](./DEVELOPING.md) docs.
+
+## Credits
+
+Vite integration inspired by [django-vite](https://github.com/MrBin99/django-vite).
