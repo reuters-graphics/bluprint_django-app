@@ -7,7 +7,7 @@
 1. Install the app from GitHub:
 
    ```bash
-   pipenv install -e git+https://github.com/reuters-graphics/django-myapp.git#egg=myapp
+   pipenv install -e git+https://github.com/reuters-graphics/django-myapp.git#egg=django-myapp
    ```
 
 2. Add "myapp" to your INSTALLED_APPS setting like this:

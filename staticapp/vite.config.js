@@ -36,11 +36,7 @@ export default defineConfig({
     })
 	],
   optimizeDeps: {
-    exclude: ['svelte-fa'],
-    include: [
-      'marked',
-      'lodash-es',
-      '@reuters-graphics/graphics-svelte-components',
-    ],
+    exclude: ['svelte-fa', '@reuters-graphics/style-theme-eisbaer'],
+    include: ['lodash-es'],
   },
 });
