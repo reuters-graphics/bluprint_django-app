@@ -1,3 +1,5 @@
+export PIPENV_VENV_IN_PROJECT=1
+
 bootstrap:
 	pipenv install --dev
 	pipenv run python manage.py migrate
@@ -5,6 +7,10 @@ bootstrap:
 
 superuser:
 	pipenv run python manage.py createsuperuser
+
+
+migrations:
+	pipenv run python manage.py makemigrations
 
 
 develop:
