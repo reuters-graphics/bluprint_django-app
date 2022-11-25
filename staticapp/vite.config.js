@@ -25,18 +25,14 @@ export default defineConfig({
           preserve: ['ld+json'],
           scss: {
             includePaths: ['src/', 'node_modules/bootstrap/scss/'],
-            importer: [
-              (url) => /^~/.test(url) ?
-                  { file: `node_modules/${url.replace('~', '')}` } : null,
-            ],
             quietDeps: true,
           },
-        })
-      ]
-    })
+        }),
+      ],
+    }),
 	],
   optimizeDeps: {
-    exclude: ['svelte-fa', '@reuters-graphics/style-theme-eisbaer'],
+    exclude: ['svelte-fa'],
     include: ['lodash-es'],
   },
 });

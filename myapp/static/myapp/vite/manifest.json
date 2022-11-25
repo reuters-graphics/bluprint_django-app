@@ -1,16 +1,14 @@
 {
   "src/home.js": {
-    "file": "assets/home.33ac7a5f.js",
+    "file": "assets/home.580cb8b5.js",
     "src": "src/home.js",
     "isEntry": true,
-    "imports": [
-      "_vendor.fbafc88b.js"
-    ],
     "css": [
-      "assets/home.ebfbb192.css"
+      "assets/home.a9073f9e.css"
     ]
   },
-  "_vendor.fbafc88b.js": {
-    "file": "assets/vendor.fbafc88b.js"
+  "src/home.css": {
+    "file": "assets/home.a9073f9e.css",
+    "src": "src/home.css"
   }
 }

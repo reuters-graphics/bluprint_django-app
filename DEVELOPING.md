@@ -24,7 +24,7 @@ A [Vite](https://vitejs.dev/)-based development environment. You'll develop fron
 
 #### `myapp/`
 
-Your pluggable Django app.
+Your [pluggable](https://docs.djangoproject.com/en/4.1/intro/reusable-apps/) Django app.
 
 ## Getting started
 

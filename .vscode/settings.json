@@ -1,12 +1,11 @@
 {
   "python.envFile": "${workspaceFolder}/example/.venv",
-  "python.pythonPath": "example/.venv/bin/python3",
   "python.formatting.provider": "black",
   "python.formatting.blackPath": "black",
   "python.formatting.blackArgs": [
     "--line-length=99"
   ],
-  "python.sortImports.args": [
+  "isort.args": [
     "--profile", "black"
   ],
   "[python]": {
