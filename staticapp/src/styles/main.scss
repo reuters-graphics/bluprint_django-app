@@ -1,0 +1,15 @@
+@import "@reuters-graphics/graphics-components/scss/colours/thematic/nord";
+
+body {
+  --grid-size: 100px; /* control the size */
+  
+  --grid-colour: #0000 90deg,#{$nord-4} 0;
+  background: 
+    conic-gradient(from 90deg at 2px 2px,var(--grid-colour))
+     0 0/var(--grid-size) var(--grid-size),
+    conic-gradient(from 90deg at 1px 1px,var(--grid-colour))
+     0 0/calc(var(--grid-size)/5) calc(var(--grid-size)/5);
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}

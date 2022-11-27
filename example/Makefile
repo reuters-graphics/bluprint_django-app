@@ -1,6 +1,6 @@
 export PIPENV_VENV_IN_PROJECT=1
 
-bootstrap:
+env:
 	pipenv install --dev
 	pipenv run python manage.py migrate
 
@@ -13,6 +13,6 @@ migrations:
 	pipenv run python manage.py makemigrations
 
 
-develop:
+app:
 	pipenv run python manage.py migrate
 	pipenv run python manage.py runserver

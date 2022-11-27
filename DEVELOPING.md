@@ -30,7 +30,7 @@ Your [pluggable](https://docs.djangoproject.com/en/4.1/intro/reusable-apps/) Dja
 
 ### Prereqs
 
-You'll need [pipenv](https://pipenv.pypa.io/en/latest/#install-pipenv-today) and a version of node `>= 14.16.0` (use [n](https://github.com/tj/n)!) installed.
+You'll need [pipenv](https://pipenv.pypa.io/en/latest/#install-pipenv-today) and a version of node `>= 14.17.0` (use [n](https://github.com/tj/n)!) installed.
 
 ### Servers
 
@@ -48,9 +48,9 @@ In the second, change to the `example/` directory and use the Makefile to bootst
 
 ```bash
 cd example
-make bootstrap
+make env
 make superuser
-make develop
+make app
 ```
 
 ### Django Settings

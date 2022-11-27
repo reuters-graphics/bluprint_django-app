@@ -15,8 +15,5 @@
     },
     "editor.insertSpaces": true,
     "editor.tabSize": 4
-  },
-  "eslint.validate":["javascript","svelte"],
-  "editor.formatOnSave":true,
-  "editor.codeActionsOnSave":{"source.fixAll.eslint":true}
+  }
 }

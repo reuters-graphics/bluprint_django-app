@@ -1,10 +1,10 @@
 from django.conf import settings as project_settings
 from django.contrib.auth.models import AnonymousUser
 from django.utils.decorators import method_decorator
-from myapp.conf import settings as app_settings
 from rest_framework import authentication, exceptions
 
-from .importers import import_class
+from myapp.conf import settings as app_settings
+from myapp.utils.importers import import_class
 
 
 def secure(view):

@@ -1,14 +1,14 @@
 {
   "src/home.js": {
-    "file": "assets/home.580cb8b5.js",
+    "file": "assets/home.f85350a8.js",
     "src": "src/home.js",
     "isEntry": true,
     "css": [
-      "assets/home.a9073f9e.css"
+      "assets/home.cbc3ddd2.css"
     ]
   },
   "src/home.css": {
-    "file": "assets/home.a9073f9e.css",
+    "file": "assets/home.cbc3ddd2.css",
     "src": "src/home.css"
   }
 }

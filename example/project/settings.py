@@ -84,4 +84,4 @@ MEDIA_URL = "/media/"
 MYAPP_VITE_DEV_MODE = True
 
 # Port of Vite dev server
-MYAPP_VITE_SERVER_PORT = 3000
+MYAPP_VITE_SERVER_PORT = 5173
