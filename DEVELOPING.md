@@ -59,7 +59,7 @@ Settings for your app are in `example/project/settings.py`.
 
 #### `MYAPP_VITE_SERVER_PORT`
 
-Set to the port the Vite server is running on. Default is `3000`.
+Set to the port the Vite server is running on. Default is `5173`.
 
 #### `MYAPP_VITE_DEV_MODE`
 
