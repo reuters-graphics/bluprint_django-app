@@ -15,7 +15,7 @@ VITE_DEV_MODE = getattr(settings, "MYAPP_VITE_DEV_MODE", False)
 
 VITE_SERVER_PROTOCOL = getattr(settings, "MYAPP_VITE_SERVER_PROTOCOL", "http")
 VITE_SERVER_HOST = getattr(settings, "MYAPP_VITE_SERVER_HOST", "localhost")
-VITE_SERVER_PORT = getattr(settings, "MYAPP_VITE_SERVER_PORT", 3000)
+VITE_SERVER_PORT = getattr(settings, "MYAPP_VITE_SERVER_PORT", 5173)
 
 # These settings match what's in Vite's build.outDir config
 APP_STATIC_DIR = "myapp"
